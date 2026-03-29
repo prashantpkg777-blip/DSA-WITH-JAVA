@@ -1,2 +1,2 @@
-public class first {
+public class first {I8WBRFTUET R WG
 }
