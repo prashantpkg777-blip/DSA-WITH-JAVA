@@ -58,7 +58,10 @@ public class operator {
         System.out.println(y--);
         System.out.println(--y);
 
+        // Ternary operator
+        int age = 65;
+        String result = (age > 18) ? "can vote" : "cannot vote" ;
 
-
+        System.out.println(result);
     }
 }
