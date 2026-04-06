@@ -28,5 +28,6 @@ public class bestFour {
         System.out.println("Droped marks:"+min);
         System.out.println("Percentage of best of 4 subjects: "+ percent +"%");
 
+        sc.close();
     }
 }
