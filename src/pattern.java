@@ -242,18 +242,58 @@ public class pattern {
 //                    System.out.println();
 //                }
 
+//                int n = 5;
+//                for (int row = 1; row <= n; row++){
+//                    // space
+//                    for (int col = 1; col <= n - row; col++){
+//                        System.out.print("  ");
+//                    }
+//                    //star
+//                    for (int col = 1; col <= 2*row - 1; col++){
+//                        System.out.print(row+" ");
+//                    }
+//                    // move to next line
+//                    System.out.println();
+//                }
+
             // Alphabetic one sided triangle
-            int n =5;
+//            int n =5;
+//
+//            for (int  row=1; row<= n; row++){
+//                for (int col=1; col <=row; col++){
+//
+//                    char finalAns = (char)('A' + col -1);
+//
+//                    System.out.print(finalAns+" ");
+//                }
+//                System.out.println();
+//            }
+//
+//        for (int  row=1; row<= n; row++){
+//            for (int col=1; col <=row; col++){
+//
+//                char finalAns = (char)('A' + n-col);
+//
+//                System.out.print(finalAns+" ");
+//            }
+//            System.out.println();
+//        }
 
-            for (int  row=1; row<= n; row++){
-                for (int col=1; col <=row; col++){
+//            int n = 5;
+//            for (int row = 1; row <= n; row++){
+//                // space
+//                for (int col = 1; col <= n - row; col++){
+//                    System.out.print("  ");
+//                }
+//                //star
+//                for (int col = 1; col <= 2*row - 1; col++){
+//                    char finalAns = (char)('A' + col -1);
+//                    System.out.print(finalAns+" ");
+//                }
+//                // move to next line
+//                System.out.println();
+//            }
 
-                    char finalAns = (char)('A' + col -1);
-
-                    System.out.print(finalAns+" ");
-                }
-                System.out.println();
-            }
 
 
 
