@@ -12,6 +12,10 @@ public class method {
         int multi = x*y;
         return multi;
     }
+    static int multiple(int x,int y, int z) {
+        int multi = x*y*z;
+        return multi;
+    }
     static void main() {
         System.out.println("Print 2 ka Table");
         // Method Call/Invoke
@@ -22,5 +26,7 @@ public class method {
         sumOf2Number(55,99);
 
         System.out.println("Multiply: "+ multiple(5,9));
+        System.out.println("Multiply: "+ multiple(5,9,2));
+
     }
 }
