@@ -20,7 +20,7 @@ public class App {
 //        A.study();
 
         // Parameterised ctor
-        Student A = new Student(2,20,"Nishant",3);
+//        Student A = new Student(2,20,"Nishant",3);
 //
 //        System.out.println(A.name);
 //        System.out.println(A.id);
@@ -32,15 +32,27 @@ public class App {
 //        A.study();
 
         // Copy ctor
-        Student B = new Student(A);
+//        Student B = new Student(A);
+//
+//        System.out.println(A.name);
+//        System.out.println(A.id);
+//        System.out.println(A.age);
+//        System.out.println(A.noS);
+//
+//        A.bunk();
+
+        // Encapsulation
+        Student A =  new Student(2,22,"Prashant",7,"Aarya");
 
         System.out.println(A.name);
         System.out.println(A.id);
-        System.out.println(A.age);
+        System.out.println(A.setAge(22));
         System.out.println(A.noS);
+        System.out.println(A.getGF());
 
         A.bunk();
-
-
+        A.sleep();
+        A.study();
+//        A.gfChatting();
     }
 }

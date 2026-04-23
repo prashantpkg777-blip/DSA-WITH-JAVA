@@ -3,9 +3,23 @@ package OOP;
 public class Student {
     // Attributes
     public int id;
-    public int age;
+    private int age;
     public String name;
     public int noS;
+    private String gf;
+
+    public String getGF() {
+        return this.gf;
+    }
+
+    public int setAge(int a) {
+        // extra security
+        if (age < 100){
+            return this.age = a;
+        } else {
+            return 0;
+        }
+    }
 
     // Default constructor // attr. -> garbage value
     public Student() {
@@ -40,5 +54,18 @@ public class Student {
     }
     public void bunk(){
         System.out.println(name + " Bunking");
+    }
+    private void gfChatting(){
+        System.out.println(name + " gfChatting");
+    }
+
+    // Encapsulation
+    public Student(int id, int age, String name, int noS, String gf) {
+        System.out.println("Encapsulation");
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.noS = noS;
+        this.gf = gf;
     }
 }
