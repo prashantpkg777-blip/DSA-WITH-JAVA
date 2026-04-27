@@ -1,5 +1,5 @@
-
-// Classical java method
+package Basics;
+// Classical java Basics.method
 
 public class classical {
     public static void main() {

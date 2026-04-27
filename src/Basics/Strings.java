@@ -1,5 +1,4 @@
-import java.util.Locale;
-import java.util.Scanner;
+package Basics;
 
 public class Strings {
     static void main() {

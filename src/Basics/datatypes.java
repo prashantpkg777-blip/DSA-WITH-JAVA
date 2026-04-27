@@ -1,3 +1,5 @@
+package Basics;
+
 public class datatypes {
     static void main() {
         // numeric type

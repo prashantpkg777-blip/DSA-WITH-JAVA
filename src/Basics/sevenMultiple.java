@@ -1,3 +1,5 @@
+package Basics;
+
 public class sevenMultiple {
     static void main() {
         // Print all integers in range from 50 to 100, that are perfectly divisible by 7

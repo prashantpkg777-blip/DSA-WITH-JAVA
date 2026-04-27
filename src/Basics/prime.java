@@ -1,4 +1,4 @@
-// print all prime number from 1 to 100
+package Basics;// print all Basics.prime number from 1 to 100
 
 public class prime {
     static void main() {

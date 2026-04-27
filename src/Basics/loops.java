@@ -1,3 +1,5 @@
+package Basics;
+
 public class loops {
     static void main() {
          // for loop

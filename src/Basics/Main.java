@@ -1,4 +1,6 @@
-// Latest Java method
+package Basics;
+
+// Latest Java Basics.method
 public class Main {
 public static void main (String[] args) {
     System.out.println("Hello Dunia!" + " Prashant");

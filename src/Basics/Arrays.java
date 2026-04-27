@@ -1,4 +1,4 @@
-import java.util.Scanner;
+package Basics;
 
 public class Arrays {
     static void main() {
@@ -46,15 +46,15 @@ public class Arrays {
 //        // Sum in array
 //
 //        int crr[] = {35,06,15,25,18,33};
-//        int sum =0;
+//        int Basics.sum =0;
 //        int n = crr.length;
 //
 //        for (int i=0; i<= n-1; i++){
 //            int val = crr[i];
-//            sum += val;
+//            Basics.sum += val;
 //        }
 //
-//        System.out.println("Sum of Array: " + sum);
+//        System.out.println("Sum of Array: " + Basics.sum);
 //
 //        // Multiply
 //        int multi = 1;
@@ -153,7 +153,7 @@ public class Arrays {
 
         System.out.println(arr[1][2]); // Output: 5
 
-         // sum
+         // Basics.sum
         int crr[][] = {{1,2},{2,3,4},{3,4,5,6},{4}};
         int sum = 0;
 

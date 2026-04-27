@@ -1,3 +1,5 @@
+package Basics;
+
 public class method {
     static void print2KaTable() {
         // Declaration/ Definition

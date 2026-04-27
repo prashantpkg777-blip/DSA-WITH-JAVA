@@ -1,9 +1,11 @@
+package Basics;
+
 public class operator {
     static void main() {
         int a = 25;
         int b = 6;
 
-        // Arithmetic operator
+        // Arithmetic Basics.operator
         int add = a+b;
         int sub = a-b;
         int multi = a*b;
@@ -16,7 +18,7 @@ public class operator {
         System.out.println(div);
         System.out.println(mod);
 
-        // Relational operator
+        // Relational Basics.operator
         System.out.println(a==b);
         System.out.println(a!=b);
         System.out.println(a>b);
@@ -24,7 +26,7 @@ public class operator {
         System.out.println(a>=b);
         System.out.println(a<=b);
 
-        // Logical operator
+        // Logical Basics.operator
         boolean completedDSA = true;
         boolean completedCore = false;
 
@@ -32,7 +34,7 @@ public class operator {
         System.out.println(completedDSA || completedCore);
         System.out.println(!completedDSA);
 
-        // Assignnment operator
+        // Assignnment Basics.operator
         int x = 10;
 
         x += 5;
@@ -46,7 +48,7 @@ public class operator {
         x %= 4;
         System.out.println(x);
 
-        // Unary inc/dec operator
+        // Unary inc/dec Basics.operator
         int y = 10;
 
         System.out.println(-y);
@@ -58,7 +60,7 @@ public class operator {
         System.out.println(y--);
         System.out.println(--y);
 
-        // Ternary operator
+        // Ternary Basics.operator
         int age = 65;
         String result = (age > 18) ? "can vote" : "cannot vote" ;
 

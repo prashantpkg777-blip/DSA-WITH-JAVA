@@ -1,3 +1,5 @@
+package Basics;
+
 public class methodHW {
 
     // 1) Print welcome message
@@ -37,7 +39,7 @@ public class methodHW {
     // 7) Update value (pass by value demonstration)
     public static void updateValue(int x) {
         x = x + 10;
-        System.out.println("Value inside method: " + x);
+        System.out.println("Value inside Basics.method: " + x);
     }
 
     public static void main(String[] args) {
@@ -64,9 +66,9 @@ public class methodHW {
 
         // 7
         int value = 50;
-        System.out.println("Original value before method: " + value);
+        System.out.println("Original value before Basics.method: " + value);
         updateValue(value);
-        System.out.println("Original value after method: " + value);
+        System.out.println("Original value after Basics.method: " + value);
     }
 }
 
