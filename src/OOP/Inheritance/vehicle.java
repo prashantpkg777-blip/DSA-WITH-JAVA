@@ -1,4 +1,4 @@
-package OOP.Transport;
+package OOP.Inheritance;
 // Inheritance
 public class vehicle {
     public String name;

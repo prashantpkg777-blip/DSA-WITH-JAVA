@@ -1,4 +1,4 @@
-package OOP.Transport;
+package OOP.Inheritance;
 
 public class motorbike extends vehicle {
     public String handleBarStyle;

@@ -1,4 +1,4 @@
-package OOP.Transport;
+package OOP.Inheritance;
 
 public class Main {
     static void main(String[] args) {
