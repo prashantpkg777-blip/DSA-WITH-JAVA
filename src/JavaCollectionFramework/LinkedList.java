@@ -1,16 +1,17 @@
 package JavaCollectionFramework;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
-public class Main {
-
+public class LinkedList {
     static void main() {
-        // List arr Collection -> interface
 
-        // ArrayList -> concrete class
-        ArrayList<Integer> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
-        Collection<Integer> list3 = new ArrayList<>();
+        // LinkedList -> concrete class
+        java.util.LinkedList<Integer> list1 = new java.util.LinkedList<>();
+        List<Integer> list2 = new java.util.LinkedList<>();
+        Collection<Integer> list3 = new java.util.LinkedList<>();
 
         // add
         list1.add(10);
@@ -52,7 +53,7 @@ public class Main {
         }
 
         // get and set
-        List<Integer> list4 = new ArrayList<>();
+        List<Integer> list4 = new java.util.LinkedList<>();
         list4.add(11);
         list4.add(12);
         list4.add(13);
@@ -87,16 +88,57 @@ public class Main {
         System.out.println("Printing Random List: " +list1);
 
         // clone
-        ArrayList<Integer> NewList = (ArrayList<Integer>)list1.clone();
-        System.out.println("Printing New List clone: " +NewList);
+//        java.util.ArrayList<Integer> NewList = (java.util.ArrayList<Integer>)list1.clone();
+//        System.out.println("Printing New List clone: " +NewList);
 
         // ensureCapacity
-        ArrayList<Integer> marks = new ArrayList<>();
+        java.util.ArrayList<Integer> marks = new java.util.ArrayList<>();
         marks.ensureCapacity(100);
 
         // isEmpty
         System.out.println(marks.isEmpty()); //true
         System.out.println(list1.isEmpty()); //false
+
+        // indexOf
+        System.out.println(list1.indexOf(40));
+        list1.add(40);
+        list1.add(20);
+        list1.add(40);
+        list1.add(30);
+        // lastIndexOf
+        System.out.println(list1);
+        System.out.println(list1.lastIndexOf(40));
+
+        // addFirst and addLast
+
+        List<Integer> ll = new java.util.LinkedList<>();
+        ll.add(20);
+        System.out.println(ll);
+        ll.addFirst(1);
+        System.out.println(ll);
+        ll.addLast(100);
+        System.out.println(ll);
+
+        // removeFirst and removeLast
+        ll.removeFirst();
+        System.out.println(ll);
+        ll.removeLast();
+        System.out.println(ll);
+
+        // getFirst and getLast
+        System.out.println(list1.getFirst());
+        System.out.println(list1.getLast());
+
+        // peek, poll and offer
+        System.out.println(list1.pollFirst());
+
+        System.out.println("before "+list1);
+        System.out.println(list1.pollLast());
+        System.out.println(list1.pollFirst());
+        System.out.println("after "+list1);
+
+        list1.offer(20);
+        System.out.println(list1);
 
     }
 }
