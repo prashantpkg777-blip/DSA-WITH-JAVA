@@ -5,13 +5,15 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-public class LinkedList {
+public class Stack {
+
     static void main() {
 
-        // LinkedList -> concrete class
-        java.util.LinkedList<Integer> list1 = new java.util.LinkedList<>();
-        List<Integer> list2 = new java.util.LinkedList<>();
-        Collection<Integer> list3 = new java.util.LinkedList<>();
+
+        // Stack -> concrete class
+        java.util.Stack<Integer> list1 = new java.util.Stack<>();
+        List<Integer> list2 = new java.util.Stack<>();
+        Collection<Integer> list3 = new java.util.Stack<>();
 
         // add
         list1.add(10);
@@ -43,7 +45,7 @@ public class LinkedList {
 
         // clear
         list2.clear();
-        System.out.println("After clear "+ list2);
+        System.out.println("After clear " + list2);
 
         // iterator ( i want to traverse list using iterator )
         Iterator<Integer> iterator = list1.iterator();
@@ -53,16 +55,16 @@ public class LinkedList {
         }
 
         // get and set
-        List<Integer> list4 = new java.util.LinkedList<>();
+        List<Integer> list4 = new java.util.Stack<>();
         list4.add(11);
         list4.add(12);
         list4.add(13);
         System.out.println(list4.get(0));
         System.out.println(list4.get(1));
 
-        System.out.println("Before set "+ list4);
-        list4.set(0,100);
-        System.out.println("After set " +list4);
+        System.out.println("Before set " + list4);
+        list4.set(0, 100);
+        System.out.println("After set " + list4);
 
         // toArray
         Object arr[] = list4.toArray();
@@ -77,15 +79,15 @@ public class LinkedList {
 
         list1.add(95);
         list1.add(25);
-        System.out.println("Printing Entire List: " +list1);
+        System.out.println("Printing Entire List: " + list1);
 
         // sort to ArrayList
         Collections.sort(list1);
-        System.out.println("Printing Sorted List: " +list1);
+        System.out.println("Printing Sorted List: " + list1);
         Collections.reverse(list1);
-        System.out.println("Printing Reverse List: " +list1);
+        System.out.println("Printing Reverse List: " + list1);
         Collections.shuffle(list1);
-        System.out.println("Printing Random List: " +list1);
+        System.out.println("Printing Random List: " + list1);
 
         // clone
 //        java.util.ArrayList<Integer> NewList = (java.util.ArrayList<Integer>)list1.clone();
@@ -109,10 +111,9 @@ public class LinkedList {
         System.out.println(list1);
         System.out.println(list1.lastIndexOf(40));
 
-      // method
         // addFirst and addLast
 
-        List<Integer> ll = new java.util.LinkedList<>();
+        List<Integer> ll = new java.util.Stack<>();
         ll.add(20);
         System.out.println(ll);
         ll.addFirst(1);
@@ -130,16 +131,30 @@ public class LinkedList {
         System.out.println(list1.getFirst());
         System.out.println(list1.getLast());
 
-        // peek, poll and offer
-        System.out.println(list1.pollFirst());
+        // method
+        java.util.Stack<Integer> stack = new java.util.Stack<>();
 
-        System.out.println("before "+list1);
-        System.out.println(list1.pollLast());
-        System.out.println(list1.pollFirst());
-        System.out.println("after "+list1);
+        //push
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.push(40);
+        System.out.println(stack);
 
-        list1.offer(20);
-        System.out.println(list1);
+        // pop
+        stack.pop();
+        System.out.println(stack);
+
+        // peek
+        System.out.println(stack.peek());
+
+        // search
+        System.out.println(stack.search(20)); // 2
+        System.out.println(stack.search(50)); // -1
+
+        // isEmpty
+        System.out.println(stack.isEmpty()); // false
+
 
     }
 }
