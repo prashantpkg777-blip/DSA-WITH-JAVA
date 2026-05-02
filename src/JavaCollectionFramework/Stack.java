@@ -1,9 +1,6 @@
 package JavaCollectionFramework;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class Stack {
 
@@ -155,6 +152,18 @@ public class Stack {
         // isEmpty
         System.out.println(stack.isEmpty()); // false
 
+        // Deque
+        Deque<Integer> deque = new java.util.ArrayDeque<>();
+
+        deque.push(10);
+        deque.push(20);
+        deque.push(30);
+        System.out.println(deque);
+
+        deque.pop();
+        System.out.println(deque);
+
+        System.out.println(deque.peek());
 
     }
 }
