@@ -34,7 +34,7 @@ public class operator {
         System.out.println(completedDSA || completedCore);
         System.out.println(!completedDSA);
 
-        // Assignnment Basics.operator
+        // Assignment Basics.operator
         int x = 10;
 
         x += 5;
