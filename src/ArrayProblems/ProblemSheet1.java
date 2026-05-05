@@ -1,6 +1,7 @@
 package ArrayProblems;
 
 import java.util.Arrays;
+import java.util.HashSet;
 
 public class ProblemSheet1 {
     // Average of array
@@ -100,6 +101,49 @@ public class ProblemSheet1 {
         return -1;
     }
 
+    // Swap Alternate element
+    static int[] swapAlternate(int[] arr){
+
+        for (int i = 0; i < arr.length-1; i+=2){
+            int temp = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = temp;
+        }
+        return arr;
+    }
+
+    // Intersection of two array
+    static void printIntersection(int[] arr1, int[] arr2) {
+        HashSet<Integer> set = new HashSet<>();
+
+        // store elements of arr1
+        for (int num : arr1) {
+            set.add(num);
+        }
+
+        // check in arr2
+        for (int num : arr2) {
+            if (set.contains(num)) {
+                System.out.print(num + " ");
+                set.remove(num); // avoid duplicates
+            }
+        }
+    }
+
+    // Print Alternate Extreme element of an Array
+    static void printAlternateExtreme(int[] arr) {
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left <= right) {
+                System.out.print(arr[left] + " ");
+                System.out.print(arr[right] + " ");
+            left++;
+            right--;
+        }
+    }
+
+
     static void main() {
 
         int arr[] = {5,-6,9,-3,-8,-2,7,1};
@@ -130,6 +174,20 @@ public class ProblemSheet1 {
         // Find UnSorted Element
         int [] arr2 = {1,2,4,6,5,7,9};
         System.out.println(getUnSortedElement(arr2));
+
+        // Swap alternate element
+        int[] ans2 = swapAlternate(arr2);
+        System.out.println("SwapAlternate element Array: " + Arrays.toString(ans2));
+
+        // Intersection of two array
+        int [] arr3 = {1,2,3,4,5,6};
+        int [] arr4 = {1,8,5,9,7,6};
+        printIntersection(arr3, arr4);
+        System.out.println();
+
+        // Print Alternate Extreme element of an Array
+        int [] arr5 = {1,2,3,4,5,6};
+        printAlternateExtreme(arr5);
 
 
     }
