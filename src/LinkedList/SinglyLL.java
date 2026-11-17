@@ -131,6 +131,68 @@ public class SinglyLL {
         size = 0;
     }
 
+    // search
+    public boolean search(int target){
+        Node temp = head;
+
+        while (temp != null){
+            if(temp.data == target){
+                return true;
+            }
+            else {
+                temp = temp.next;
+            }
+        }
+        return false;
+    }
+
+    public int findPosition(int target){
+        Node temp = head;
+        int index = 0;
+
+        while(temp != null){
+            if(temp.data == target){
+                return index;
+            }
+            else {
+                temp = temp.next;
+                index++;
+
+            }
+        }
+        return -1;
+    }
+
+    // update
+    public void updateAtPosition(int position, int newData){
+        Node temp = head;
+
+        if(position < 0 || position > size){
+            System.out.println("Invalid position");
+            return;
+        }
+
+        for(int i = 0; i < position; i++){
+            temp = temp.next;
+        }
+
+        temp.data = newData;
+    }
+
+    public void updateData(int oldData, int newData){
+        Node temp = head;
+        while(temp != null){
+            if(temp.data == oldData){
+                temp.data = newData;
+            }
+            else {
+                temp = temp.next;
+            }
+
+        }
+
+    }
+
     public static void main(String[] args) {
         SinglyLL sll = new SinglyLL();
 
@@ -161,13 +223,30 @@ public class SinglyLL {
         System.out.print("After insertion: ");
         sll.display();
 
-        // Clear Linked List
-        sll.clear();
+        // search
+        System.out.println(sll.search(25));
 
-        System.out.print("After clear: ");
+        // findPosition
+        System.out.println("Position: " + sll.findPosition(25));
+
+        // updateAtPosition
+        sll.updateAtPosition(4, 50);
+        System.out.print("After update: ");
         sll.display();
 
-        System.out.println("Size after clear: " + sll.getSize());
+        // update data
+        sll.updateData(2, 20);
+        System.out.print("After update: ");
+        sll.display();
+
+//        // Clear Linked List
+//        sll.clear();
+//
+//        System.out.print("After clear: ");
+//        sll.display();
+//
+//        System.out.println("Size after clear: " + sll.getSize());
+
 
     }
 }
