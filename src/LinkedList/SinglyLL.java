@@ -193,6 +193,108 @@ public class SinglyLL {
 
     }
 
+    // delete
+
+    public void deleteAtHead() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        head = head.next;
+        size--;
+
+        if (head == null) {
+            tail = null;
+        }
+    }
+
+    public void deleteAtTail() {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        if (head == tail) {
+            head = null;
+            tail = null;
+        }
+        else {
+            Node temp = head;
+
+            while (temp.next != tail) {
+                temp = temp.next;
+            }
+
+            temp.next = null;
+            tail = temp;
+        }
+
+        size--;
+    }
+
+    public void deleteAtPosition(int index) {
+
+        if (index < 0 || index >= size) {
+            System.out.println("Invalid index");
+            return;
+        }
+
+        if (index == 0) {
+            deleteAtHead();
+            return;
+        }
+
+        if (index == size - 1) {
+            deleteAtTail();
+            return;
+        }
+
+        Node temp = head;
+
+        for (int i = 0; i < index - 1; i++) {
+            temp = temp.next;
+        }
+
+        temp.next = temp.next.next;
+
+        size--;
+    }
+
+    public void deleteByValue(int value) {
+
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+
+        if (head.data == value) {
+            deleteAtHead();
+            return;
+        }
+
+        Node temp = head;
+
+        while (temp.next != null && temp.next.data != value) {
+            temp = temp.next;
+        }
+
+        if (temp.next == null) {
+            System.out.println("Value not found");
+            return;
+        }
+
+        if (temp.next == tail) {
+            tail = temp;
+        }
+
+        temp.next = temp.next.next;
+
+        size--;
+    }
+
     public static void main(String[] args) {
         SinglyLL sll = new SinglyLL();
 
@@ -201,7 +303,7 @@ public class SinglyLL {
         sll.insertAtHead(2);
 
         // insert at tail
-        sll.insertAtTail(4);
+        sll.insertAtTail(40);
         sll.insertAtTail(5);
 
         // display
@@ -238,6 +340,30 @@ public class SinglyLL {
         sll.updateData(2, 20);
         System.out.print("After update: ");
         sll.display();
+
+        // Delete at Head
+        sll.deleteAtHead();
+        System.out.print("After Delete Head: ");
+        sll.display();
+
+        // Delete at Tail
+        sll.deleteAtTail();
+        System.out.print("After Delete Tail: ");
+        sll.display();
+
+        // Delete at Position
+        sll.deleteAtPosition(1);
+        System.out.print("After Delete Position 1: ");
+        sll.display();
+
+        // Delete by Value
+        sll.deleteByValue(40);
+        System.out.print("After Delete Value 40: ");
+        sll.display();
+
+        System.out.println("Head: " + sll.getHead());
+        System.out.println("Tail: " + sll.getTail());
+        System.out.println("Size: " + sll.getSize());
 
 //        // Clear Linked List
 //        sll.clear();
